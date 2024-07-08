@@ -1,0 +1,4 @@
+{'id': 1, 'name': 'boton_volver_atras', 'path_imagen': 'Parcial_pivigames/botones/volver_atras.png', 'ancho_y_alto': (50, 50), 'width_height': (10, 10)}
+{'id': 2, 'name': 'boton_reload', 'path_imagen': 'Parcial_pivigames/botones/comodin_reloaded.png', 'ancho_y_alto': (45, 45), 'width_height': (700, 450)}
+{'id': 3, 'name': 'boton_half', 'path_imagen': 'Parcial_pivigames/botones/comodin_half.png', 'ancho_y_alto': (45, 45), 'width_height': (755, 450)}
+{'id': 4, 'name': 'boton_next', 'path_imagen': 'Parcial_pivigames/botones/comodin_next.png', 'ancho_y_alto': (45, 45), 'width_height': (805, 450)}

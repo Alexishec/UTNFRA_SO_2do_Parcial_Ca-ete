@@ -1,0 +1,10 @@
+{'id': 1, 'name': 'jurados1', 'path_imagen': 'Parcial_pivigames/botones/jurado.png', 'ancho_y_alto': (50, 50), 'width_height': (515, 145)}
+{'id': 2, 'name': 'jurados2', 'path_imagen': 'Parcial_pivigames/botones/jurado.png', 'ancho_y_alto': (50, 50), 'width_height': (635, 145)}
+{'id': 3, 'name': 'jurados3', 'path_imagen': 'Parcial_pivigames/botones/jurado.png', 'ancho_y_alto': (50, 50), 'width_height': (465, 235)}
+{'id': 4, 'name': 'jurados4', 'path_imagen': 'Parcial_pivigames/botones/jurado.png', 'ancho_y_alto': (50, 50), 'width_height': (585, 235)}
+{'id': 5, 'name': 'jurados5', 'path_imagen': 'Parcial_pivigames/botones/jurado.png', 'ancho_y_alto': (50, 50), 'width_height': (705, 235)}
+{'id': 6, 'name': 'mesa_jurados1', 'path_imagen': 'Parcial_pivigames/botones/mesa_votacion.png', 'ancho_y_alto': (80, 50), 'width_height': (500, 185)}
+{'id': 7, 'name': 'mesa_jurados2', 'path_imagen': 'Parcial_pivigames/botones/mesa_votacion.png', 'ancho_y_alto': (80, 50), 'width_height': (620, 185)}
+{'id': 8, 'name': 'mesa_jurados3', 'path_imagen': 'Parcial_pivigames/botones/mesa_votacion.png', 'ancho_y_alto': (80, 50), 'width_height': (450, 275)}
+{'id': 9, 'name': 'mesa_jurados4', 'path_imagen': 'Parcial_pivigames/botones/mesa_votacion.png', 'ancho_y_alto': (80, 50), 'width_height': (570, 275)}
+{'id': 10, 'name': 'mesa_jurados5', 'path_imagen': 'Parcial_pivigames/botones/mesa_votacion.png', 'ancho_y_alto': (80, 50), 'width_height': (690, 275)}

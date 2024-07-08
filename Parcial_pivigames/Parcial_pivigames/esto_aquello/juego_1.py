@@ -71,22 +71,9 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
     monedas = pygame.image.load("Parcial_pivigames/botones/monedas.png")
     monedas = pygame.transform.scale(monedas,(100,100))
 
-
-    # COMODINES
-
-    comodin_reload = pygame.image.load("Parcial_pivigames/botones/comodin_reloaded.png")
-    comodin_reload = pygame.transform.scale(comodin_reload,(45,45))
-   
-    comodin_half = pygame.image.load("Parcial_pivigames/botones/comodin_half.png")
-    comodin_half = pygame.transform.scale(comodin_half,(45,45))
- 
-    comodin_next = pygame.image.load("Parcial_pivigames/botones/comodin_next.png")
-    comodin_next = pygame.transform.scale(comodin_next,(45,45))
-
     #PREGUNTAS
 
     fuente = pygame.font.SysFont("Arial",20)
-
     lista_preguntas = ["café,té",
                     "Perros,gatos",
                     "Ciudad,campo",
@@ -103,8 +90,6 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
     texto = fuente.render("¿Prefieres cocinar en casa o salir a comer en un restaurante?",False,BLANCO,NEGRO)
     #GESTION DE PREGUNTAS POR TIEMPO
 
-    """Inicializamos el metodo time.clock para saber el tiempo inicial desde donde arranca y al finalizar 
-    """  
     clock = pygame.time.Clock()
     tiempo_inicial = pygame.time.get_ticks()
 
@@ -117,6 +102,8 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
 
     pygame.init()
 
+    # jurador1_voto = pygame.draw.rect(PANTALLA,BLANCO,(50,50,100,100))
+    
     def jurado_elecicon()->list:
         lista = []
         for i in range(cant_jurados):
@@ -132,19 +119,13 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
 
     contador_jurados_votos=0
 
-    lista_posiciones = []
     transicion = False
-    eleccion_hecha = False
-    bandera_pregunta_en_curso = True
-    tiempo_de_votacion = True
-    bandera_next = True
-    bandera_reload=True
-    bandera_half=False
-    uso_comodin_reloaded=True
-    uso_comodin_half = True
-    uso_comodin_next = True
 
-    recurecu = pygame.draw.rect(PANTALLA,ROJO,(585,340,50,50))
+    eleccion_hecha = False
+
+    bandera_pregunta_en_curso = True
+
+    tiempo_de_votacion = True
 
     bandera = True
     while bandera:
@@ -163,43 +144,18 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
 
                     if eleccion_hecha == False:
 
-                        if pos_x >= x+20 and pos_x <=(x+190) and pos_y >=y+340 and pos_y <= (y+340+30):
+                        if pos_x >= x-50 and pos_x <=(350+150) and pos_y >=y+150 and pos_y <= (350+150):
                             print("boton rojo")
                             decicion = 1
                             tiempo_de_votacion=False
                             lista_votos_jurados = jurado_elecicon()
                             eleccion_hecha = True
-
-                        elif pos_x >= x+220 and pos_x <=(x+400) and pos_y >=y+340 and pos_y <= (y+340+30):
+                        elif pos_x >= x+350 and pos_x <=(750+150) and pos_y >=y+150 and pos_y <= (350+150):
                             print("boton azul")
                             decicion = 2
                             tiempo_de_votacion=False
                             lista_votos_jurados = jurado_elecicon()
                             eleccion_hecha = True
-
-
-                        if uso_comodin_reloaded:
-                            if pos_x >= 700 and pos_x <=(700+45) and pos_y >=450 and pos_y <= (450+45):
-                                print("Gol")
-                                bandera_pregunta_en_curso=True
-                                bandera_reload=False
-                                uso_comodin_reloaded=False
-                        if uso_comodin_half:
-                            if pos_x >= 755 and pos_x <=(755+45) and pos_y >=450 and pos_y <= (450+45):
-                                print("Gol2")
-                                lista_votos_jurados = jurado_elecicon()
-                                bandera_half=True
-                                uso_comodin_half = False
-                        if uso_comodin_next:
-                            if pos_x >= 805 and pos_x <=(805+45) and pos_y >=450 and pos_y <= (450+45):
-                                print("Gol3")
-                                decicion = 3
-                                lista_votos_jurados = jurado_elecicon()
-                                tiempo_de_votacion=False
-                                eleccion_hecha = True
-                                uso_comodin_next = False
-                            
-                            
 
 
                     if pos_x >= x-390 and pos_x <=(10+50) and pos_y >=y-190 and pos_y <= (10+50):
@@ -254,8 +210,8 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
         # PANTALLA.blit(trofeos,(750,290))
 
         # botones de eleccion + volver atras
-        # PANTALLA.blit(boton_azul,(750,350))
-        # PANTALLA.blit(boton_rojo,(350,350))
+        PANTALLA.blit(boton_azul,(750,350))
+        PANTALLA.blit(boton_rojo,(350,350))
         PANTALLA.blit(boton_volver_atras,(10,10))
 
 
@@ -272,10 +228,11 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
             for preguntas in lista_preguntas:
 
                 if preguntas in lista_preguntas_ya_hechas:
-                    numero_pregunta = random.randint(0,10)
-                else:
-                    break
+                    bandera_while=True
 
+                    while bandera_while:
+                        
+                        numero_pregunta = random.randint(0,10)
 
         if lista_preguntas[numero_pregunta] not in lista_preguntas_ya_hechas:
             lista_preguntas_ya_hechas.append(lista_preguntas[numero_pregunta])
@@ -290,7 +247,7 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
         # TEMPORIZADOR 
         tiempo_actual = pygame.time.get_ticks()
         tiempo_transcurrido = tiempo_actual - tiempo_inicial
-        # print(f"{(tiempo_transcurrido*0.001):.00f}")
+        print(f"{(tiempo_transcurrido*0.001):.00f}")
         tiempo_mostrado = tiempo_transcurrido*0.001
 
         if tiempo_de_votacion:
@@ -303,12 +260,10 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
                         contador_jurados_votos+=1
             
             else:
-                texto = fuente.render("¿Que Prefieres?",False,BLANCO,NEGRO)
+                texto = fuente.render(lista_preguntas[numero_pregunta],False,BLANCO,NEGRO)
                 contador_tiempo = fuente.render(f"{(tiempo_mostrado):.00f}",False,BLANCO,None)  
-                PANTALLA.blit(contador_tiempo,(ANCHO//2,475))
+                PANTALLA.blit(contador_tiempo,(ANCHO//2,495))
 
-
-        # ESULTADO DEL JUEGO + CAMBIO DE COLOR DE VOTOS
 
         else:
             if tiempo_actual%10==0 and contador_jurados_votos<5:
@@ -320,121 +275,15 @@ def game_start_juego_1(lista_preguntas_ya_hechas:list)->list|None:
                 time_time = tiempo_actual*1.5
 
 
-            if contador_jurados_votos == 5 :
-                for i in range(len(lista_votos_jurados)):
-                    if lista_votos_jurados[i]==1:
-                        lista_posiciones.append((465+(50*votos_rojos),350,45,45))
-                        votos_rojos +=1
-                        # print("ojo")
-
-                    elif lista_votos_jurados[i]==2:
-                        lista_posiciones.append((715-(50*votos_azules),350,45,45))
-                        votos_azules+=1
-                        # print("azul")
-                        
-                
-                for i in range(len(lista_votos_jurados)):
-                    if lista_votos_jurados[i] == 1:
-                        pygame.draw.rect(PANTALLA,ROJO,lista_posiciones[i])  
-                    else:
-                        pygame.draw.rect(PANTALLA,AZUL,lista_posiciones[i])  
-
-        
-        if bandera_half: 
-            if tiempo_actual%10==0 and contador_jurados_votos<2:
-                if lista_votos_jurados[contador_jurados_votos] == 1:
-                    lista_rectangulos[contador_jurados_votos] =[255,0,0]
-                else:
-                    lista_rectangulos[contador_jurados_votos] = [0,0,255]        
-                contador_jurados_votos+=1
-                time_time = tiempo_actual*1.5
-
-            if contador_jurados_votos == 1 :
-                for i in range(len(lista_votos_jurados)-3):
-                    if lista_votos_jurados[i]==1:
-                        lista_posiciones.append((465+(50*votos_rojos),350,45,45))
-                        votos_rojos +=1
-                        
-                        # 465
-                        # print("ojo")
-                    elif lista_votos_jurados[i]==1:
-                        lista_posiciones.append((715-(50*votos_azules),350,45,45))
-                        votos_azules+=1
-                        # print("azul")
-                        # 715
-   
-
-                        
-        if contador_jurados_votos == 5 :
-                    
-            if votos_rojos>=3:
-                ganador = "Gana el Rojo"
-                if decicion == 1 or decicion == 3:
-                    usuario_gano = "Has ganado"
-                else:
-                    usuario_gano = "Has perdido"
-
-            elif votos_azules>=3:
-                ganador = "Gana el Azul"
-                if decicion == 2 or decicion == 3:
-                    usuario_gano = "Has ganado"
-                else:
-                    usuario_gano = "Has perdido"
-
-        
-            texto = fuente.render(f"{ganador}",False,BLANCO,NEGRO)
-            texto_usuario_decicion = fuente.render(f"{usuario_gano}",False,BLANCO,NEGRO)
-            PANTALLA.blit(texto_usuario_decicion,(555,525))
-                    
-
+            if contador_jurados_votos == 5 and tiempo_actual%100==0:
+                texto = fuente.render("OLOLOLOLOLOL",False,BLANCO,NEGRO)
             # print(f"time: {tiempo_actual}")
 
-        PANTALLA.blit(texto,(550,500))
+        PANTALLA.blit(texto,(ANCHO//3,520))
 
 
-        if contador_jurados_votos != 5:
-
-
-            if bandera_reload:
-                texto_comodin_reloaded = fuente.render("Reload",False,NEGRO,BLANCO) 
-                PANTALLA.blit(texto_comodin_reloaded,(705,420))
-                PANTALLA.blit(comodin_reload,(700,450))
-
-            if bandera_half == False: 
-                texto_comodin_half = fuente.render("Half",False,NEGRO,BLANCO) 
-                PANTALLA.blit(texto_comodin_half,(755,420))
-                PANTALLA.blit(comodin_half,(755,450))
-
-            if bandera_next:
-                texto_comodin_next = fuente.render("Next",False,NEGRO,BLANCO) 
-                PANTALLA.blit(texto_comodin_next,(755,420))
-                PANTALLA.blit(comodin_next,(805,450))
-
-                
-            respuesta = lista_preguntas[numero_pregunta].split(",")
-
-            base_1 = 420
-            base_2 = 620
-
-
-            pygame.draw.rect(PANTALLA,ROJO,(420,545,170,30))
-            pygame.draw.rect(PANTALLA,AZUL,(620,545,180,30))
-
-            opcion_uno = respuesta[0]
-            opcion_dos = respuesta[1]
-
-
-            
-            
-
-            respuesta1 = fuente.render(f"{opcion_uno}",False,BLANCO,ROJO)
-            respuesta2 = fuente.render(f"{opcion_dos}",False,BLANCO,AZUL)
-            
-            PANTALLA.blit(respuesta1,(420,540))
-            PANTALLA.blit(respuesta2,(620,540))
+            # PANTALLA.blit(contador_tiempo,(ANCHO//2,495))
         pygame.display.update()
     
     # print(lista_preguntas_ya_hechas)
     # return lista_preguntas_ya_hechas
-
-

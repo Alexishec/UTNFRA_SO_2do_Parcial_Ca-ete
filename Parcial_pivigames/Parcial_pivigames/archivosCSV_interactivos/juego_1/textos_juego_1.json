@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "¿Que prefieres?",
+        "texto": "¿Que prefieres?",
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            550,
+            500
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Opcion rojo",
+        "texto": null,
+        "color": [
+            255,
+            0,
+            0
+        ],
+        "coordenadas": [
+            420,
+            540
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Opcion azul",
+        "texto": null,
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "coordenadas": [
+            620,
+            540
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ganador",
+        "texto": "Vencedor",
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            550,
+            500
+        ]
+    },
+    {
+        "id": 5,
+        "name": "resultado",
+        "texto": null,
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            430,
+            525
+        ]
+    },
+    {
+        "id": 6,
+        "name": "tiempo",
+        "texto": null,
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            600,
+            375
+        ]
+    }
+]

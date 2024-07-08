@@ -1,0 +1,7 @@
+{'id': 1, 'name': 'retangulo_1', 'color': [255, 255, 255], 'coordenadas': (530, 200, 20, 20)}
+{'id': 2, 'name': 'retangulo_2', 'color': [255, 255, 255], 'coordenadas': (650, 200, 20, 20)}
+{'id': 3, 'name': 'retangulo_3', 'color': [255, 255, 255], 'coordenadas': (480, 290, 20, 20)}
+{'id': 4, 'name': 'retangulo_4', 'color': [255, 255, 255], 'coordenadas': (600, 290, 20, 20)}
+{'id': 5, 'name': 'retangulo_5', 'color': [255, 255, 255], 'coordenadas': (720, 290, 20, 20)}
+{'id': 6, 'name': 'boton_rojo', 'color': [255, 0, 0], 'coordenadas': (420, 535, 170, 30)}
+{'id': 7, 'name': 'boton_azul', 'color': [0, 0, 255], 'coordenadas': (620, 535, 180, 30)}

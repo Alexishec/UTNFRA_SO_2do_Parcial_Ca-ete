@@ -1,0 +1,3 @@
+{'id': 1, 'name': 'Usuario', 'path_imagen': 'Parcial_pivigames/botones/usuario.png', 'ancho_y_alto': (250, 155), 'width_height': (45, 300)}
+{'id': 2, 'name': 'mesa_usuario', 'path_imagen': 'Parcial_pivigames/botones/mesa_votacion.png', 'ancho_y_alto': (160, 100), 'width_height': (75, 420)}
+{'id': 3, 'name': 'score', 'path_imagen': 'Parcial_pivigames/botones/monedas.png', 'ancho_y_alto': (50, 50), 'width_height': (1000, 50)}

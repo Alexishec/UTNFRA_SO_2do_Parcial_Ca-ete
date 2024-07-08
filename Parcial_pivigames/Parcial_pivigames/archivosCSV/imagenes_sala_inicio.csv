@@ -1,0 +1,2 @@
+{'id': 1, 'name': 'sala_de_espera', 'path_imagen': 'Parcial_pivigames/botones/sala_de_espera.png', 'ancho_y_alto': (1200, 600), 'width_height': (0, 0)}
+{'id': 2, 'name': 'boton_inicio', 'path_imagen': 'Parcial_pivigames/botones/start.png', 'ancho_y_alto': (450, 200), 'width_height': (400, 200)}

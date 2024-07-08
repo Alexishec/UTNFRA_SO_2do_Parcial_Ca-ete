@@ -1,0 +1,5 @@
+{'id': 1, 'name': 'boton_trivia', 'path_imagen': 'Parcial_pivigames/botones/imagen_trivia.png', 'ancho_y_alto': (150, 150), 'width_height': (750, 350)}
+{'id': 2, 'name': 'boton_decicion', 'path_imagen': 'Parcial_pivigames/botones/boton_decicion.jpg', 'ancho_y_alto': (150, 150), 'width_height': (350, 350)}
+{'id': 3, 'name': 'boton_configuracion', 'path_imagen': 'Parcial_pivigames/botones/configuracion.png', 'ancho_y_alto': (50, 50), 'width_height': (10, 10)}
+{'id': 4, 'name': 'boton_skins', 'path_imagen': 'Parcial_pivigames/botones/skins.png', 'ancho_y_alto': (200, 100), 'width_height': (1000, 200)}
+{'id': 5, 'name': 'usuario_skins', 'path_imagen': 'Parcial_pivigames/botones/usuario.png', 'ancho_y_alto': (150, 95), 'width_height': (967, 186)}

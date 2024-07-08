@@ -1,0 +1,2 @@
+{'id': 1, 'name': 'fondo_teatro', 'path_imagen': 'Parcial_pivigames/botones/Fondo_pantalla.png', 'ancho_y_alto': (1200, 600), 'width_height': (0, 0)}
+{'id': 2, 'name': 'gradas', 'path_imagen': 'Parcial_pivigames/botones/escaleras_sin_fondo.png', 'ancho_y_alto': (800, 600), 'width_height': (200, 0)}

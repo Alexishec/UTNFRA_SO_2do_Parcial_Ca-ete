@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "monedas",
+        "texto": 720,
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            1090,
+            65
+        ]
+    },
+    {
+        "id": 2,
+        "name": "puntuacion:racha_esto_aquello",
+        "texto": 0,
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            450,
+            500
+        ]
+    },
+    {
+        "id": 3,
+        "name": "puntuacion:racha_trivia",
+        "texto": 0,
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            850,
+            500
+        ]
+    },
+    {
+        "id": 4,
+        "name": "racha_esto_aquello",
+        "texto": "Racha: ",
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            370,
+            500
+        ]
+    },
+    {
+        "id": 5,
+        "name": "racha_trivia",
+        "texto": "Racha: ",
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "coordenadas": [
+            770,
+            500
+        ]
+    }
+]
